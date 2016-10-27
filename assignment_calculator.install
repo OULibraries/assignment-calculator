@@ -1,0 +1,78 @@
+<?php
+include_once 'assignment_calculator.field_base.inc';
+include_once 'assignment_calculator.field_instance.inc';
+include_once 'assignment_calculator.field_conditions.inc';
+include_once 'assignment_calculator.field_group.inc';
+include_once 'assignment_calculator.webform_whole.inc';
+
+
+/**
+ * implements hook_install
+ * calls functions to create the fields, create the instances, and conditions
+ * also calls the function to create the webform
+ */
+function assignment_calculator_install() {
+  node_types_rebuild();
+  foreach (_assignment_calculator_installed_fields() as $field) {
+    field_create_field($field);
+  }
+  foreach (_assignment_calculator_installed_instances() as $fieldinstance) {
+    field_create_instance($fieldinstance);
+    $dependent_instance = field_info_instance('node', $fieldinstance['field_name'], $fieldinstance['bundle']);
+    assign_conditions($dependent_instance);
+  }
+
+  foreach (_assignment_calculator_field_group_info() as $fieldgroups) {
+    drupal_write_record('field_group', $fieldgroups);
+    ctools_export_crud_enable('field_group', $fieldgroups->identifier);
+  }
+
+  _assignment_calculator_create_template_webform();
+}
+
+/**
+ * implements hook_uninstall
+ */
+function assignment_calculator_uninstall() {
+
+  // Remove existing content
+  $query = 'SELECT nid ';
+  $query .= 'FROM {node} ';
+  $query .= 'WHERE {node}.type = :type ';
+
+  $result = db_query($query, array(':type' => 'assignment_template'));
+
+  $nids = array();
+
+  foreach ($result as $row) {
+    $nids[] = $row->nid;
+  }
+
+  node_delete_multiple($nids);
+
+  // Delete fields and instances
+  foreach (field_info_instances('node', 'assignment_template') as $field_name => $instance) {
+    field_delete_instance($instance);
+  }
+
+  // Delete content type
+  node_type_delete('assignment_template');
+
+  // Purge field batch
+  field_purge_batch(1000);
+}
+
+/**
+ * @param $dependent_instance
+ * loops through fields and checks conditions array to see if it has a dependee
+ */
+function assign_conditions($dependent_instance) {
+  foreach (_assignment_calculator_conditional_fields() as $fieldconditions) {
+    if ($fieldconditions['dependent'] == $dependent_instance['field_name']) {
+      $temp_instance = field_info_instance('node', $fieldconditions['dependee'], 'assignment_template');
+
+      conditional_fields_dependency_insert($temp_instance['id'],
+        $dependent_instance['id'], $fieldconditions['options']);
+    }
+  }
+}

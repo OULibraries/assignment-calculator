@@ -1,0 +1,187 @@
+<?php
+
+/**
+ * @return array
+ * implements hook_views_api
+ */
+function assignment_calculator_views_api() {
+  return array('api' => 3.0);
+}
+
+/**
+ * @return mixed
+ * implements hook_views_default_views
+ */
+function assignment_calculator_views_default_views() {
+  // Check for all view file in views directory
+  $files = file_scan_directory(drupal_get_path('module', 'assignment_calculator')
+    . '/views', '/.*\.inc$/');
+
+  // Add view to list of views
+  foreach ($files as $filepath => $file) {
+    require $filepath;
+    if (isset($view)) {
+      $views[$view->name] = $view;
+    }
+  }
+
+  // At the end, return array of default views.
+  return $views;
+}
+
+/**
+ * @return array
+ * sets the callback for the Assignment Template webform
+ */
+function assignment_calculator_webform_select_options_info() {
+  $items = array();
+
+  if (module_exists('views')) {
+    $items['templates'] = array(
+      'title' => t('Assignment Templates'),
+      'options callback' => 'assignment_calculator_options',
+    );
+  }
+
+  return $items;
+}
+
+/**
+ * @return array
+ * sets the nid to the title of the student_picker view
+ */
+function assignment_calculator_options() {
+
+  $view = views_get_view('student_picker', true);
+  $view->execute();
+  $items = array();
+
+  foreach ($view->result as $item) {
+    $full_node = node_load($item->nid);
+    $items[$item->nid] = $full_node->title;
+  }
+
+  return $items;
+}
+
+/**
+ * @param $form
+ * @param $form_state
+ * @param $form_id
+ * implements hook_form_alter
+ */
+function assignment_calculator_form_alter(&$form, &$form_state, $form_id) {
+  if (isset($form['#node'])) { //prevent error when doesn't exist
+    if (is_object($form['#node']) && ($form['#node']->type == 'webform')) {
+      if ($form['#node']->title == 'Assignment Calculator') {
+        // if submit is clicked call the callback function
+        $form['actions']['submit']['#submit'][] = 'set_params_function';
+      }
+    }
+  }
+}
+
+/**
+ * @param $form
+ * @param $form_state
+ * takes the data in the webform and passes it to the url
+ */
+function set_params_function(&$form, &$form_state) {
+  if ($form['#node']->title == 'Assignment Calculator') {
+    $templateID = $form_state['input']['submitted']['assignment_template'];
+    // setting due date as one string
+    $due_date = $form_state['input']['submitted']['due']['year'] . '-' .
+      $form_state['input']['submitted']['due']['month'] . '-' .
+      $form_state['input']['submitted']['due']['day'];
+
+    // setting start date as one string
+    $start_date = $form_state['input']['submitted']['starts']['year'] . '-' .
+      $form_state['input']['submitted']['starts']['month'] . '-' .
+      $form_state['input']['submitted']['starts']['day'];
+
+    // redirecting to content page with date parameters
+  $form_state['redirect'] = 'http://' . $_SERVER['HTTP_HOST'] . '/node/' . $templateID .
+    '?start=' . $start_date . '&due=' . $due_date;
+  }
+}
+
+
+/**
+ * Implements hook_node_view().
+ */
+function assignment_calculator_node_view($node, $view_mode, $langcode) {
+  if ($node->type == 'assignment_template') {
+
+    entity_get_controller('node')->resetCache(array($node->nid));
+
+    $i = 1;
+    $percentage = 0;
+    // loop through only the steps that have a set title
+    // keep a running percentage to set the due date
+    while (isset($node->content['field_step_title'.$i])) {
+      $percentage += ((int)$node->content['field_percentage'.$i]['#items'][0]['value']);
+
+      $due_date = get_due_date($node, $i, $percentage);
+      $node->content['field_date_complete'.$i][0] = array(
+        '#markup' => '<div>' . $due_date . '</div>',
+      );
+
+      $i++;
+    }
+  }
+}
+
+/**
+ * @param $node
+ * @param $i
+ * @param $percentage
+ * @return false|int|string
+ * This calculates the due date for each step
+ */
+function get_due_date($node, $i, $percentage) {
+  $temp_due = isset($_REQUEST['due']) ? $_REQUEST['due'] : '-';
+  $temp_start = isset($_REQUEST['start']) ? $_REQUEST['start'] : '-';
+  $percentage = $percentage/100;
+
+  $temp_due = strtotime($temp_due);
+  $temp_start = strtotime($temp_start);
+
+  $projected_due = $temp_start + ($percentage * ($temp_due - $temp_start));
+
+  $due_date = $projected_due > $temp_due ? $temp_due :
+    date('m-d-Y', $temp_start + ($percentage * ($temp_due - $temp_start)) );
+
+
+  // @todo if this is the last step set the complete date to the due date entered
+  $next = $i + 1;
+
+return $due_date;
+}
+
+/**
+ * Implements hook_node_info().
+ */
+function assignment_calculator_node_info() {
+  $items = array(
+    'assignment_template' => array(
+      'name' => t('Assignment Template'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Assignment Template'),
+      'help' => '',
+    ),
+  );
+  drupal_alter('node_info', $items);
+  return $items;
+}
+
+function assignment_calculator_theme() {
+  return array(
+    'assignment_template_node_form' => array(
+      'template' => 'assignment_template-node-form',
+      'render element' => 'form',
+    ),
+  );
+}
+

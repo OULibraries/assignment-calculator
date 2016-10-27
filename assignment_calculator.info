@@ -1,0 +1,13 @@
+name = Assignment Calculator
+description = Module to add functionality for the assignment calculator
+core = 7.x
+files[] = assignment_calculator.module
+files[] = assignment_calculator.install
+files[] = assignment_template-node-form.tpl.php
+
+dependencies[] = ctools
+dependencies[] = field_group
+dependencies[] = conditional_fields
+dependencies[] = strongarm
+dependencies[] = views
+dependencies[] = webform
