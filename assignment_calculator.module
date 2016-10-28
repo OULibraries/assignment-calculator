@@ -182,6 +182,12 @@ function assignment_calculator_theme() {
       'template' => 'assignment_template-node-form',
       'render element' => 'form',
     ),
+    'node__assignment_template' => array(
+      'render element' => 'content',
+      'base hook' => 'node',
+      'template' => 'node--assignment_template',
+      'path' => drupal_get_path('module', 'assignment_calculator') . '/templates',
+    ),
   );
 }
 
