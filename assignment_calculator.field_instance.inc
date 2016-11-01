@@ -1129,7 +1129,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -1174,7 +1174,7 @@ function _assignment_calculator_installed_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_date_complete1',
-    'label' => 'date complete',
+    'label' => 'Due Date',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -1203,7 +1203,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -1248,7 +1248,7 @@ function _assignment_calculator_installed_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_date_complete10',
-    'label' => 'Date Complete',
+    'label' => 'Due Date',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -1277,7 +1277,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -1322,7 +1322,7 @@ function _assignment_calculator_installed_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_date_complete11',
-    'label' => 'Date Complete',
+    'label' => 'Due Date',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -1351,7 +1351,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -1396,7 +1396,7 @@ function _assignment_calculator_installed_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_date_complete12',
-    'label' => 'Date Complete',
+    'label' => 'Due Date',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -1425,7 +1425,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -1470,7 +1470,7 @@ function _assignment_calculator_installed_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_date_complete13',
-    'label' => 'Date Complete',
+    'label' => 'Due Date',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -1499,7 +1499,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -1544,7 +1544,7 @@ function _assignment_calculator_installed_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_date_complete14',
-    'label' => 'Date Complete',
+    'label' => 'Due Date',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -1573,7 +1573,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -1618,7 +1618,7 @@ function _assignment_calculator_installed_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_date_complete15',
-    'label' => 'Date Complete',
+    'label' => 'Due Date',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -1647,7 +1647,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -1692,7 +1692,7 @@ function _assignment_calculator_installed_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_date_complete2',
-    'label' => 'date complete',
+    'label' => 'Due Date',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -1721,7 +1721,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(
           'display' => 'none',
@@ -1768,7 +1768,7 @@ function _assignment_calculator_installed_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_date_complete3',
-    'label' => 'date complete',
+    'label' => 'Due Date',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -1797,7 +1797,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -1842,7 +1842,7 @@ function _assignment_calculator_installed_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_date_complete4',
-    'label' => 'Date Complete',
+    'label' => 'Due Date',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -1871,7 +1871,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -1916,7 +1916,7 @@ function _assignment_calculator_installed_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_date_complete5',
-    'label' => 'Date Complete',
+    'label' => 'Due Date',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -1945,7 +1945,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -1990,7 +1990,7 @@ function _assignment_calculator_installed_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_date_complete6',
-    'label' => 'Date Complete',
+    'label' => 'Due Date',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -2019,7 +2019,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -2064,7 +2064,7 @@ function _assignment_calculator_installed_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_date_complete7',
-    'label' => 'Date Complete',
+    'label' => 'Due Date',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -2093,7 +2093,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -2138,7 +2138,7 @@ function _assignment_calculator_installed_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_date_complete8',
-    'label' => 'Date Complete',
+    'label' => 'Due Date',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -2167,7 +2167,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -2212,7 +2212,7 @@ function _assignment_calculator_installed_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_date_complete9',
-    'label' => 'Date Complete',
+    'label' => 'Due Date',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -2237,7 +2237,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -2313,7 +2313,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -2389,7 +2389,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -2465,7 +2465,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -2541,7 +2541,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -2617,7 +2617,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -2693,7 +2693,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -2769,7 +2769,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -2845,7 +2845,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -2921,7 +2921,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -2997,7 +2997,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -3073,7 +3073,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -3149,7 +3149,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -3225,7 +3225,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -3301,7 +3301,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -3377,7 +3377,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -3447,7 +3447,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -3517,7 +3517,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -3587,7 +3587,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -3657,7 +3657,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -3727,7 +3727,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -3797,7 +3797,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -3867,7 +3867,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -3937,7 +3937,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -4007,7 +4007,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -4077,7 +4077,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -4147,7 +4147,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -4217,7 +4217,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -4287,7 +4287,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -4357,7 +4357,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -4427,7 +4427,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidgit sden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -4497,7 +4497,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -4567,7 +4567,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -4637,7 +4637,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -4707,7 +4707,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -4777,7 +4777,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -4847,7 +4847,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -4917,7 +4917,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -4987,7 +4987,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -5057,7 +5057,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -5127,7 +5127,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -5197,7 +5197,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -5267,7 +5267,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -5337,7 +5337,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -5407,7 +5407,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',

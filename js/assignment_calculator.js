@@ -6,7 +6,7 @@
     var groups;
 
     // called when we want to show the group
-    function showBlock(n) { console.log('here here');
+    function showBlock(n) {
         $('.step-' + n + '-display-field-group').show();
         $('#field-date-complete' + n + '-add-more-wrapper').hide();
     }
@@ -39,7 +39,7 @@
     $(document).ready(function () {
         var n;
         var i;
-        $("[id^=edit-field-add-step]").click(function (event) { console.log('hello');
+        $("[id^=edit-field-add-step]").click(function (event) {
             if (document.getElementById(event.target.id)) {
                 if (document.getElementById(event.target.id).checked) {
                     n = event.target.id.match(/\d/g);
