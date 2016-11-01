@@ -4427,7 +4427,7 @@ function _assignment_calculator_installed_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidgit sden',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
