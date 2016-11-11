@@ -86,8 +86,10 @@ function assignment_calculator_form_alter(&$form, &$form_state, $form_id) {
  * @param $form_state
  * takes the data in the webform and passes it to the url
  */
-function set_params_function(&$form, &$form_state) {
+function set_params_function(&$form, &$form_state) { dpm($form_state);
   if ($form['#node']->title == 'Assignment Calculator') {
+    $assignment_title = $form_state['input']['submitted']['assignment_title'] ?
+      $form_state['input']['submitted']['assignment_title'] : 'No Title';
     $templateID = $form_state['input']['submitted']['assignment_template'];
     // setting due date as one string
     $due_date = $form_state['input']['submitted']['due']['year'] . '-' .
@@ -101,7 +103,7 @@ function set_params_function(&$form, &$form_state) {
 
     // redirecting to content page with date parameters
   $form_state['redirect'] = 'http://' . $_SERVER['HTTP_HOST'] . '/node/' . $templateID .
-    '?start=' . $start_date . '&due=' . $due_date;
+    '?start=' . $start_date . '&due=' . $due_date . '&title=' . $assignment_title;
   }
 }
 
@@ -113,6 +115,9 @@ function assignment_calculator_node_view($node, $view_mode, $langcode) {
   if ($node->type == 'assignment_template') {
 
     entity_get_controller('node')->resetCache(array($node->nid));
+    $node->content['assignment_title'] = array(
+      'markup' => $_REQUEST['title'],
+    );
 
     $i = 1;
     $percentage = 0;
@@ -148,7 +153,7 @@ function get_due_date($node, $i, $percentage) {
 
   $projected_due = $temp_start + ($percentage * ($temp_due - $temp_start));
 
-  $due_date = $projected_due > $temp_due ? $temp_due :
+  $due_date = $projected_due > $temp_due ? date('m-d-Y', $temp_due) :
     date('m-d-Y', $temp_start + ($percentage * ($temp_due - $temp_start)) );
 
 
