@@ -429,7 +429,7 @@ function _assignment_calculator_installed_fields() {
     'entity_types' => array(),
     'field_name' => 'field_date_complete1',
     'field_permissions' => array(
-      'type' => 2,
+      'type' => 0,
     ),
     'indexes' => array(
       'format' => array(
@@ -453,7 +453,7 @@ function _assignment_calculator_installed_fields() {
     'entity_types' => array(),
     'field_name' => 'field_date_complete10',
     'field_permissions' => array(
-      'type' => 2,
+      'type' => 0,
     ),
     'indexes' => array(
       'format' => array(
@@ -477,7 +477,7 @@ function _assignment_calculator_installed_fields() {
     'entity_types' => array(),
     'field_name' => 'field_date_complete11',
     'field_permissions' => array(
-      'type' => 2,
+      'type' => 0,
     ),
     'indexes' => array(
       'format' => array(
@@ -501,7 +501,7 @@ function _assignment_calculator_installed_fields() {
     'entity_types' => array(),
     'field_name' => 'field_date_complete12',
     'field_permissions' => array(
-      'type' => 2,
+      'type' => 0,
     ),
     'indexes' => array(
       'format' => array(
@@ -525,7 +525,7 @@ function _assignment_calculator_installed_fields() {
     'entity_types' => array(),
     'field_name' => 'field_date_complete13',
     'field_permissions' => array(
-      'type' => 2,
+      'type' => 0,
     ),
     'indexes' => array(
       'format' => array(
@@ -549,7 +549,7 @@ function _assignment_calculator_installed_fields() {
     'entity_types' => array(),
     'field_name' => 'field_date_complete14',
     'field_permissions' => array(
-      'type' => 2,
+      'type' => 0,
     ),
     'indexes' => array(
       'format' => array(
@@ -573,7 +573,7 @@ function _assignment_calculator_installed_fields() {
     'entity_types' => array(),
     'field_name' => 'field_date_complete15',
     'field_permissions' => array(
-      'type' => 2,
+      'type' => 0,
     ),
     'indexes' => array(
       'format' => array(
@@ -597,7 +597,7 @@ function _assignment_calculator_installed_fields() {
     'entity_types' => array(),
     'field_name' => 'field_date_complete2',
     'field_permissions' => array(
-      'type' => 2,
+      'type' => 0,
     ),
     'indexes' => array(
       'format' => array(
@@ -621,7 +621,7 @@ function _assignment_calculator_installed_fields() {
     'entity_types' => array(),
     'field_name' => 'field_date_complete3',
     'field_permissions' => array(
-      'type' => 2,
+      'type' => 0,
     ),
     'indexes' => array(
       'format' => array(
@@ -645,7 +645,7 @@ function _assignment_calculator_installed_fields() {
     'entity_types' => array(),
     'field_name' => 'field_date_complete4',
     'field_permissions' => array(
-      'type' => 2,
+      'type' => 0,
     ),
     'indexes' => array(
       'format' => array(
@@ -669,7 +669,7 @@ function _assignment_calculator_installed_fields() {
     'entity_types' => array(),
     'field_name' => 'field_date_complete5',
     'field_permissions' => array(
-      'type' => 2,
+      'type' => 0,
     ),
     'indexes' => array(
       'format' => array(
@@ -693,7 +693,7 @@ function _assignment_calculator_installed_fields() {
     'entity_types' => array(),
     'field_name' => 'field_date_complete6',
     'field_permissions' => array(
-      'type' => 2,
+      'type' => 0,
     ),
     'indexes' => array(
       'format' => array(
@@ -717,7 +717,7 @@ function _assignment_calculator_installed_fields() {
     'entity_types' => array(),
     'field_name' => 'field_date_complete7',
     'field_permissions' => array(
-      'type' => 2,
+      'type' => 0,
     ),
     'indexes' => array(
       'format' => array(
@@ -741,7 +741,7 @@ function _assignment_calculator_installed_fields() {
     'entity_types' => array(),
     'field_name' => 'field_date_complete8',
     'field_permissions' => array(
-      'type' => 2,
+      'type' => 0,
     ),
     'indexes' => array(
       'format' => array(
@@ -765,7 +765,7 @@ function _assignment_calculator_installed_fields() {
     'entity_types' => array(),
     'field_name' => 'field_date_complete9',
     'field_permissions' => array(
-      'type' => 2,
+      'type' => 0,
     ),
     'indexes' => array(
       'format' => array(

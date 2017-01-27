@@ -14,7 +14,9 @@ include_once 'assignment_calculator.webform_whole.inc';
 function assignment_calculator_install() {
   node_types_rebuild();
   foreach (_assignment_calculator_installed_fields() as $field) {
-    field_create_field($field);
+    if (!field_info_field($field['field_name'])) {
+      field_create_field($field);
+    }
   }
   foreach (_assignment_calculator_installed_instances() as $fieldinstance) {
     field_create_instance($fieldinstance);
@@ -54,6 +56,9 @@ function assignment_calculator_uninstall() {
   foreach (field_info_instances('node', 'assignment_template') as $field_name => $instance) {
     field_delete_instance($instance);
   }
+//  foreach (field_info_instances('node', 'assignment_calculator') as $field_name => $instance) {
+//    field_delete_instance($instance);
+//  }
 
   // Delete content type
   node_type_delete('assignment_template');
